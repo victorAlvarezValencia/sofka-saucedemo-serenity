@@ -1,0 +1,65 @@
+PRUEBA TECNICA SOFKA - EJERCICIO 1
+Hallazgos y conclusiones del flujo E2E de SauceDemo
+===================================================
+
+Fecha de ejecucion de referencia: 11 de noviembre de 2026
+Aplicacion bajo prueba: https://www.saucedemo.com/
+Tecnologia principal: Serenity BDD 5.3.8 + Java + JUnit 5 + Screenplay
+Entorno observado: Windows, Google Chrome
+
+1. ALCANCE VALIDADO
+------------------
+- Autenticacion del usuario de demostracion standard_user.
+- Seleccion de dos productos: Sauce Labs Backpack y Sauce Labs Bike Light.
+- Validacion del contador de carrito con valor 2.
+- Apertura del carrito y comprobacion del nombre de ambos productos.
+- Diligenciamiento del formulario de compra con datos de prueba.
+- Acceso al resumen Checkout: Overview.
+- Finalizacion de compra y confirmacion con el mensaje
+  THANK YOU FOR YOUR ORDER.
+
+2. RESULTADOS OBSERVADOS
+-----------------------
+- Ejecucion completa de ambas clases (login y compra):
+  2 tests ejecutados, 2 aprobados, 0 fallos y 0 errores.
+- Ejecucion aislada del escenario de compra E2E:
+  1 escenario ejecutado, 1 aprobado, 0 fallos y 0 errores.
+  Duracion registrada en el reporte: aproximadamente 6,58 segundos.
+- El navegador Chrome ejecuto de manera visible las acciones de la compra.
+- Serenity genero un reporte HTML interactivo con el resultado aprobado.
+
+3. HALLAZGOS
+------------
+- Las validaciones implementadas se completaron satisfactoriamente en el
+  entorno y ejecuciones observados.
+- No se detectaron defectos funcionales durante el escenario de compra
+  automatizado y aprobado.
+- En algunas ejecuciones se observaron advertencias de compatibilidad CDP
+  entre Selenium y la version de Chrome. Estas no impidieron la ejecucion
+  exitosa de las pruebas realizadas.
+
+4. CONCLUSIONES
+--------------
+La automatizacion cubre los pasos obligatorios del ejercicio: autenticacion,
+seleccion de dos productos, consulta del carrito, checkout y confirmacion.
+El patron Screenplay permite separar los casos de prueba de las tareas de
+negocio reutilizables, y las clases Target centralizan los selectores.
+
+Los resultados obtenidos aportan evidencia favorable para el flujo validado,
+pero no demuestran que la aplicacion completa este libre de defectos.
+
+5. LIMITACIONES Y RECOMENDACIONES
+--------------------------------
+- El alcance es un flujo positivo de compra con un usuario de demostracion.
+- No se incluyen pruebas de carga, seguridad, accesibilidad, multiples
+  navegadores, compra con errores o escenarios negativos, porque no son
+  requisitos de este ejercicio.
+- La prueba depende de la disponibilidad y del comportamiento de la pagina
+  externa SauceDemo.
+- Como mejoras futuras se recomienda parametrizar datos, ampliar validaciones
+  del resumen de pago y mantener una estrategia de regresion de escenarios
+  negativos y combinaciones adicionales de productos.
+- Mantener versionadas las fuentes y las instrucciones; guardar el reporte
+  generado como evidencia de la ejecucion verificada.
+
+Resultado final del ejercicio: APROBADO en las ejecuciones observadas.
